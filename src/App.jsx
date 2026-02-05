@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 import "./App.css";
 
-/* ---------- SIMPLE PAGES ---------- */
+/* ---------- PAGES ---------- */
 
 function Learn({ topics, selected, setSelected }) {
   return (
     <div className="main">
-      {/* SIDEBAR */}
       <div className="sidebar">
         <h3>Course Topics</h3>
 
@@ -22,7 +27,6 @@ function Learn({ topics, selected, setSelected }) {
         ))}
       </div>
 
-      {/* CONTENT */}
       <div className="content">
         {selected && (
           <>
@@ -39,7 +43,7 @@ function Build() {
   return (
     <div className="page">
       <h1>Build</h1>
-      <p>This is the Build page.</p>
+      <p>Build page content</p>
     </div>
   );
 }
@@ -48,7 +52,7 @@ function Dashboard() {
   return (
     <div className="page">
       <h1>Dashboard</h1>
-      <p>This is the Dashboard page.</p>
+      <p>Dashboard content</p>
     </div>
   );
 }
@@ -74,7 +78,7 @@ function App() {
 
         {/* NAVBAR */}
         <div className="navbar">
-          <div className="logo">TechLearn</div>
+          <div>TechLearn</div>
 
           <div className="nav-links">
             <Link to="/">Learn</Link>
